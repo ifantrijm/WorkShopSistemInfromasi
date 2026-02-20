@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2be669, #0b92c7);
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            /* width: 50%;        */
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);     
+        }
+
+        .box .lb {
+            width: 30%;
+        }
+        .box table input,select{
+            width: 100%;
+            /* border: none; */
+            border-radius: 3px;
+            height: 20px;
+        }
+
+        .box td {
+            /* margin-bottom: 10px; */
+            padding: 10px;
+        }
+
+        .box table{
+            border:  none;
+        }    
+
+        .box .btn {
+            background-color: rgb(31, 132, 248);
+            /* color: white; */
+            border: none;
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);            
+        }
+        .box .btn_reset {
+            background-color: rgb(126, 128, 131);
+            color: white;
+            border: none;
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Form Pendaftaran UKM OLAHRAGA POLIJE</h1> -->
+    
+    <div class="box" >
+        <form action="">
+        <table cellspacing="0" >
+            <head>
+                <tr>
+                    <td class="lb">
+                        <label for="">Nama </label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class   ="lb">
+                        <label for="">NIM  </label>
+                    </td>
+                    <td>
+                        <input type="text"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">
+                        <label for="">Jurusan </label>
+                    </td>
+                    <td>
+                        <input type="text"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">
+                        <label for="">Email  </label>
+                    </td>
+                    <td>
+                        <input type="email"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">
+                        <label for="">No Hp  </label>
+                    </td>
+                    <td>
+                        <input type="number"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">
+                        <label for="">UKM  </label>
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="">Basket</option>
+                            <option value="">Futsal</option>
+                            <option value="">Bulu Tangkis</option>
+                            <option value="">Karate</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">
+                        <label for="">Seberapa Minat  </label>
+                    </td>
+                    <td>
+                        <input type="range"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">
+                        <label for="">Jenis Kelamin  </label>
+                    </td>
+                    <td style="display: flex;">
+                        <input type="radio" name="jk"> Laki
+                        <input type="radio" name="jk"> Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lb">
+                        <label for="">Tgl Lahir  </label>
+                    </td>
+                    <td>
+                        <input type="date"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="display: flex; gap: 10px;">
+                        <input class="btn" type="submit" name="" id="">
+                        <input class="btn_reset" type="reset" name="" id="">
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td class="lb">
+                        <label for="">JS  </label>
+                    </td>
+                    <td style="display: flex; justify-content: start; align-items: start;">
+                        <input type="radio" name="jk">
+                        <br>
+                        <input type="radio" name="jk">
+                    </td>
+                    <td></td>
+                </tr> -->
+            </head>
+        </table>
+        </form>
+    </div>
+
+
+
+
+
+    <!-- <h1>HTML FORM</h1>
+    <form action="">
+        <label for="">Forst Name</label>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="">Last Name</label>
+        <input type="text" id="lname" name="lname" value=""><br>
+        <input type="submit">
+    </form> -->
+    <!-- <table border="2" width="100%" >
+        <thead>
+            <tr align="center">
+                <td>Nim</td>
+                <td>Nama</td>
+                <td>Golongan</td>                
+            </tr>
+        </thead>
+    </table> -->
+</body>
+</html>

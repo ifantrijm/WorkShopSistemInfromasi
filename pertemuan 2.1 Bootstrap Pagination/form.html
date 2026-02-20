@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+    <div class="container p-2">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="card-title mb-0 text-center">Form  Data Mahasiswa</h1>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="" class="p-2">
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama Mahasiswa</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Mahasiswa">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nim Mahasiswa</label>
+                                <input type="number" class="form-control" id="nim" name="nim" placeholder="Masukkan NIM Mahasiswa">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Program Studi</label>
+                                <select name="prodi" id="prodi" class="form-select mb-3" aria-label="Default select example">
+                                    <option selected>-- Pilih Program Studi --</option>
+                                    <option value="Teknik Rekayasa Perangkat Lunak">Teknik Rekayasa Perangkat Lunak</option>
+                                    <option value="Manajemen Informatika">Manajemen Informatika</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="Teknik Komputer">Teknik Komputer</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Email Mahasiswa</label>
+                                <input type="email" class="form-control" id="nim" name="nim" placeholder="Masukkan Email Mahasiswa">
+                            </div>                            
+
+                            
+                            <div class="mb-3">
+                                <label for="jk" class="form-label">Jenis Kelamin</label>
+                               <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jk" id="radioDefault1">
+                                <label class="form-check-label" for="radioDefault1">
+                                    Laki-laki
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jk" id="radioDefault2" >
+                                <label class="form-check-label" for="radioDefault2">
+                                    Perempuan
+                                </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="reset" value="Reset" class="btn btn-danger">
+                                <input type="submit" value="Submit" class="btn btn-primary" name="submit">
+                                <a href="belajar.html"><input type="button" class="btn btn-success" value="Home"></input></a>
+                            </div>                            
+                        </form>
+                    </div>
+                    <div class="card-footer bg-primary text-white text-center">
+                        <h1 class="card-title ">Polije Sipp</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+<?php
+  include "koneksi.php";
+
+  if (isset($_POST['submit'])) {
+    mysqli_query($koneksi,"insert into mahasiswa set
+        nama = '$_POST[nama]',
+        nim = '$_POST[nim]',
+        prodi = '$_POST[prodi]',
+        email = '$_POST[email]',
+        jk = '$_POST[jk]' ");
+
+        echo "berhasil di tambah";
+        exit();
+  }
+?>

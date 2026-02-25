@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.custom_selector</title>
+    <style>
+        /* some custom style */
+        * {
+            padding: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Highlight table rows appearing at odd places
+            $("tr:odd").css("background", "yellow");
+
+            // Highlight table rows appearing at even places
+            $("tr:even").css("background", "orange");
+
+            // Highlight first paragraph element
+            $("p:first").css("background", "red");
+
+            // Highlight first paragraph element
+            $("p:first").css("background", "red");
+
+            // Highlight last paragraph element
+            $("p:last").css("background", "green");
+
+            // Highlight all input elements with type text inside a from
+            $("form :text").css("background", "purple");
+
+            // Highlight all input elements with type password inside a from
+            $("form :password").css("background", "blue");
+
+            // Highlight all input elements with type submit inside a from
+            $("form :submit").css("background", "violet");
+        })
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name.</th>
+                <th>Email.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Tom Holland</td>
+                <td>tomholland@spidey.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tobey Maguire</td>
+                <td>tobeymaguire@spidey.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Andrew Garfield</td>
+                <td>andrewgarfiel@spidey.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>This is a paragraf.</p>
+    <p>This is another paragraf.</p>
+    <p>This is one more paragraf.</p>
+    <form action="">
+        <label>Name: <input type="text"></label>
+        <label for="">Password: <input type="password"></label>
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+</html>

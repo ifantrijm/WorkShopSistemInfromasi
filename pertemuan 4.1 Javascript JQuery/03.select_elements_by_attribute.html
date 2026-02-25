@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.select_elements_by_attribute</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input[type="text"]').css("background", "yellow");
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="">Name <input type="text"></label>
+        <label for="">Password: <input type="password"></label>
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+</html>

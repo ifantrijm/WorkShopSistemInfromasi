@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body { height:1500px; }
+        .box { margin-top:20px; padding:10px; background:#eee; }
+    </style>
+</head>
+<body>
+
+<h2>Contoh Form Events jQuery</h2>
+
+<form id="myForm">
+    Nama: <input type="text" id="nama"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+    Pilih Jurusan:
+    <select id="jurusan">
+        <option>RPL</option>
+        <option>TKJ</option>
+        <option>AKL</option>
+    </select><br><br>
+    <input type="submit" value="Kirim">
+</form>
+
+<div class="box" id="output">Output muncul di sini</div>
+
+<script>
+$(document).ready(function(){
+
+    // ready()
+    $("#output").html("Halaman sudah siap!");
+
+    // change()
+    $("#jurusan").change(function(){
+        $("#output").html("Jurusan dipilih: " + $(this).val());
+    });
+
+    // focus()
+    $("#nama").focus(function(){
+        $(this).css("background","yellow");
+    });
+
+    // blur()
+    $("#nama").blur(function(){
+        $(this).css("background","white");
+    });
+
+    // submit()
+    $("#myForm").submit(function(e){
+        e.preventDefault();
+        $("#output").html("Form berhasil dikirim!");
+    });
+
+    // resize()
+    $(window).resize(function(){
+        $("#output").html("Ukuran window berubah!");
+    });
+
+    // scroll()
+    $(window).scroll(function(){
+        $("#output").html("Halaman sedang discroll...");
+    });
+
+});
+</script>
+
+</body>
+</html>

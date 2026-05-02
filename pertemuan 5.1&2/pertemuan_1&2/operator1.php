@@ -7,7 +7,7 @@ echo "Nilai Tugas I :".$tugas1."<br>";
 echo "Nilai Tugas II:".$tugas2."<br>";
 echo "Jumlah Tugas :".$jumlah."<br>";
 echo "Rerata Tugas :".$rerata."<br>";
-?>
+?> 
 
 <!-- tugas -->
 <?php
